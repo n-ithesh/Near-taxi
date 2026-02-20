@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Us | Near Taxi Service Goa</title>
+    <meta name="description"
+        content="Learn more about Near Taxi Service, the most trusted and professional taxi provider in Goa. Our story, mission, and commitment to excellence.">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/desktop.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Animations (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- SVG Filters -->
+    <svg style="display:none;">
+        <defs>
+            <filter id="ultra-sharpen">
+                <feConvolveMatrix order="3 3" preserveAlpha="true" kernelMatrix="0 -1 0 -1 5 -1 0 -1 0" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- ==============================================
+         MOBILE EXPERIENCE
+         ============================================== -->
+    <div id="mobile-app">
+        <!-- Header -->
+        <header class="mobile-header bg-glass">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo.png" alt="Near Taxi Logo"></a>
+            </div>
+            <div class="actions">
+                <a href="tel:+918262908873" class="icon-btn primary">
+                    <i class="ph ph-phone-call"></i>
+                </a>
+                <button class="icon-btn" id="menu-toggle">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu">
+            <div class="menu-content">
+                <div class="menu-header">
+                    <div class="logo">
+                        <img src="assets/logo.png" alt="Near Taxi Logo">
+                    </div>
+                    <button class="icon-btn" id="menu-close">
+                        <i class="ph ph-x"></i>
+                    </button>
+                </div>
+                <nav class="menu-links">
+                    <a href="index.html"><i class="ph ph-house"></i> Home</a>
+                    <a href="services.html"><i class="ph ph-briefcase"></i> Our Services</a>
+                    <a href="index.html#fleet"><i class="ph ph-car"></i> Our Fleet</a>
+                    <a href="tours.html"><i class="ph ph-map-trifold"></i> Popular Tours</a>
+                    <a href="about.html" class="active"><i class="ph ph-users"></i> About Us</a>
+                    <a href="index.html#testimonials"><i class="ph ph-star"></i> Customer Reviews</a>
+                    <a href="tel:+918262908873" class="menu-cta"><i class="ph ph-phone-call"></i> Book Your Taxi</a>
+                </nav>
+                <div class="menu-footer">
+                    <div style="display: flex; gap: 20px;">
+                        <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#"><i class="ph ph-whatsapp-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Hero -->
+        <section class="mobile-hero" style="min-height: 40vh;">
+            <div class="hero-overlay-main"></div>
+            <div class="hero-content" style="padding-bottom: 40px;">
+
+                <h1>Driven by <br><span class="text-accent">Excellence</span></h1>
+                <p>Providing Goa's most reliable travel experience since 2018.</p>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="container" style="padding-top: 40px;">
+            <div class="about-card-mobile"
+                style="background: white; border-radius: 24px; padding: 24px; box-shadow: var(--shadow-soft); margin-bottom: 24px;">
+                <h2 style="font-size: 1.5rem; color: #000; margin-bottom: 16px;">Who We Are</h2>
+                <p style="color: #4B5563; line-height: 1.7;">Starting with just two cars in North Goa, Near Taxi Service
+                    has grown into a premier fleet serving thousands of tourists and locals every month. Our journey is
+                    built on a single promise: <strong>Transparency.</strong></p>
+            </div>
+
+            <div class="stats-grid-mobile"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px;">
+                <div style="background: var(--color-primary); padding: 20px; border-radius: 20px; text-align: center;">
+                    <h3 style="font-size: 1.5rem; margin: 0;">150+</h3>
+                    <p style="font-size: 0.8rem; margin: 0; font-weight: 600;">Managed Fleet</p>
+                </div>
+                <div style="background: #111827; padding: 20px; border-radius: 20px; text-align: center; color: white;">
+                    <h3 style="font-size: 1.5rem; margin: 0; color: var(--color-primary);">5k+</h3>
+                    <p style="font-size: 0.8rem; margin: 0; opacity: 0.8;">Happy Clients</p>
+                </div>
+            </div>
+
+            <h2 style="font-size: 1.5rem; color: #000; margin-bottom: 24px;">Our Values</h2>
+            <div class="value-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+                <div
+                    style="width: 48px; height: 48px; background: rgba(255, 215, 0, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--color-primary); flex-shrink: 0;">
+                    <i class="ph ph-shield-check" style="font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 4px; font-size: 1.1rem;">Safety First</h4>
+                    <p style="font-size: 0.9rem; color: #6B7280;">Every driver undergoes rigorous background checks and
+                        regular safety training.</p>
+                </div>
+            </div>
+            <div class="value-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+                <div
+                    style="width: 48px; height: 48px; background: rgba(255, 215, 0, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--color-primary); flex-shrink: 0;">
+                    <i class="ph ph-clock" style="font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 4px; font-size: 1.1rem;">Always On Time</h4>
+                    <p style="font-size: 0.9rem; color: #6B7280;">We value your time. Our system ensures your taxi
+                        arrives 5 minutes before the booking.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Footer -->
+        <footer class="mobile-footer container">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="Near Taxi Logo" height="40">
+                <p>Premium Taxi Service in Goa. Reliability you can trust, 24/7 at your service.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Contact Us</h4>
+                    <a href="tel:+918262908873"><i class="ph ph-phone"></i> +91 82629 08873</a>
+                    <a href="mailto:purushottamnaiker8@gmail.com"><i class="ph ph-envelope"></i> Email Support</a>
+                </div>
+                <div class="link-group">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Near Taxi Goa. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Sticky Bottom Nav -->
+        <nav class="mobile-bottom-nav">
+            <a href="index.html" class="nav-item">
+                <i class="ph ph-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="services.html" class="nav-item">
+                <i class="ph ph-grid-four"></i>
+                <span>Services</span>
+            </a>
+            <div class="nav-item central-action">
+                <a href="tel:+918262908873" class="action-circle">
+                    <i class="ph ph-phone-call"></i>
+                </a>
+            </div>
+            <a href="tours.html" class="nav-item">
+                <i class="ph ph-map-trifold"></i>
+                <span>Tours</span>
+            </a>
+            <a href="https://wa.me/918262908873" class="nav-item">
+                <i class="ph ph-chat-circle-dots"></i>
+                <span>Chat</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- ==============================================
+         DESKTOP EXPERIENCE
+         ============================================== -->
+    <div id="desktop-experience">
+        <div class="desktop-bg-gradient"></div>
+        <nav class="desktop-nav">
+            <div class="container nav-content">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/logo.png" alt="Near Taxi Logo"></a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="index.html#fleet">Our Fleet</a>
+                    <a href="tours.html">Popular Tours</a>
+                    <a href="about.html" class="active">About Us</a>
+                    <a href="index.html#testimonials">Reviews</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="tel:+918262908873" class="btn btn-primary">
+                        <i class="ph ph-phone-call"></i> +91 82629 08873
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- About Hero Desktop -->
+        <section class="container" style="padding-top: 180px; padding-bottom: 100px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <div data-aos="fade-right">
+
+                    <h1 style="font-size: 3.5rem; margin-bottom: 24px;">Changing How Goa <br><span
+                            class="text-accent">Travels</span></h1>
+                    <p
+                        style="font-size: 1.15rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 32px;">
+                        Near Taxi Service was founded on the principle of providing high-quality, professional
+                        transportation that treats every traveler like a VIP. Whether you're heading to a business
+                        meeting or exploring the hidden beaches of South Goa, our commitment to safety and comfort
+                        remains the same.
+                    </p>
+                    <div style="display: flex; gap: 40px;">
+                        <div>
+                            <h2 style="font-size: 2.5rem; margin-bottom: 4px;">99%</h2>
+                            <p style="color: var(--color-text-muted);">Client Satisfaction</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 2.5rem; margin-bottom: 4px;">24/7</h2>
+                            <p style="color: var(--color-text-muted);">Expert Availability</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div
+                        style="position: relative; border-radius: 32px; overflow: hidden; box-shadow: var(--shadow-xl);">
+                        <img src="assets/hero_modern.png" alt="Taxi Service About"
+                            style="width: 100%; border-radius: 32px;">
+                        <div
+                            style="position: absolute; inset: 0; background: linear-gradient(30deg, rgba(17, 24, 39, 0.4), transparent);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section style="background: white; padding: 100px 0;">
+            <div class="container">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 60px;">
+                    <h2 style="font-size: 2.5rem; color: #000;">Our Core Values</h2>
+                    <p style="color: #6B7280;">The pillars that make Near Taxi Service the most trusted provider in the
+                        state.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+                    <div style="padding: 40px; border-radius: 24px; border: 1px solid #F3F4F6; transition: 0.3s;"
+                        onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='none'">
+                        <i class="ph ph-heart"
+                            style="font-size: 3rem; color: var(--color-primary); margin-bottom: 24px;"></i>
+                        <h3 style="color: #000;">Customer First</h3>
+                        <p style="color: #6B7280;">Your comfort is our priority. We listen to feedback and constantly
+                            improve our service standards.</p>
+                    </div>
+                    <div style="padding: 40px; border-radius: 24px; border: 1px solid #F3F4F6; transition: 0.3s;"
+                        onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='none'">
+                        <i class="ph ph-hand-coins"
+                            style="font-size: 3rem; color: var(--color-primary); margin-bottom: 24px;"></i>
+                        <h3 style="color: #000;">Fair Pricing</h3>
+                        <p style="color: #6B7280;">No hidden charges. No bargaining stress. Just fair, competitive
+                            prices every time you book.</p>
+                    </div>
+                    <div style="padding: 40px; border-radius: 24px; border: 1px solid #F3F4F6; transition: 0.3s;"
+                        onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='none'">
+                        <i class="ph ph-leaf"
+                            style="font-size: 3rem; color: var(--color-primary); margin-bottom: 24px;"></i>
+                        <h3 style="color: #000;">Clean & Green</h3>
+                        <p style="color: #6B7280;">We take pride in our well-maintained, sanitized vehicles. A clean
+                            taxi is a happy taxi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Desktop Footer -->
+        <footer class="desktop-footer"
+            style="background: #0F172A; color: #D1D5DB; padding: 100px 0 40px; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px; margin-bottom: 80px;">
+                    <div>
+                        <img src="assets/logo.png" alt="Near Taxi Logo" height="90" style="margin-bottom: 30px;">
+                        <p style="max-width: 350px; line-height: 1.8; color: #94A3B8; font-size: 1rem;">Experience the
+                            gold standard of travel in Goa. We provide professional, reliable, and premium taxi services
+                            across the state, ensuring every journey is as memorable as your destination.</p>
+                        <div style="display: flex; gap: 15px; margin-top: 30px;">
+                            <a href="#"
+                                style="width: 45px; height: 45px; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05);"><i
+                                    class="ph ph-facebook-logo" style="font-size: 1.3rem;"></i></a>
+                            <a href="#"
+                                style="width: 45px; height: 45px; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05);"><i
+                                    class="ph ph-instagram-logo" style="font-size: 1.3rem;"></i></a>
+                            <a href="#"
+                                style="width: 45px; height: 45px; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05);"><i
+                                    class="ph ph-whatsapp-logo" style="font-size: 1.3rem;"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4
+                            style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 30px; border-left: 3px solid #1a73e8; padding-left: 15px;">
+                            Our Services</h4>
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
+                            <li><a href="services.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Airport
+                                    Transfers</a></li>
+                            <li><a href="tours.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Local
+                                    Sightseeing</a></li>
+                            <li><a href="tours.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Outstation
+                                    Trips</a></li>
+                            <li><a href="services.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Luxury Fleet</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4
+                            style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 30px; border-left: 3px solid #1a73e8; padding-left: 15px;">
+                            Quick Links</h4>
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
+                            <li><a href="about.html"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">About Near Taxi</a>
+                            </li>
+                            <li><a href="index.html#testimonials"
+                                    style="color: inherit; text-decoration: none; transition: 0.3s;">Reviews</a>
+                            </li>
+                            <li><a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Privacy
+                                    Policy</a></li>
+                            <li><a href="#" style="color: inherit; text-decoration: none; transition: 0.3s;">Terms &
+                                    Use</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4
+                            style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 30px; border-left: 3px solid #1a73e8; padding-left: 15px;">
+                            Official Address</h4>
+                        <div style="display: flex; flex-direction: column; gap: 25px;">
+                            <div style="display: flex; gap: 15px;">
+                                <div
+                                    style="width: 45px; height: 45px; background: rgba(26,115,232,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="ph-fill ph-map-pin" style="color: #60A5FA; font-size: 1.2rem;"></i>
+                                </div>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.5;">H.No.103., A1 Village VARCA
+                                    Church, <br>margao, goa - 403721</p>
+                            </div>
+                            <div style="display: flex; gap: 15px;">
+                                <div
+                                    style="width: 45px; height: 45px; background: rgba(52,211,153,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="ph-fill ph-phone" style="color: #34D399; font-size: 1.2rem;"></i>
+                                </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <span
+                                        style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; font-weight: 700;">Call
+                                        Us 24/7</span>
+                                    <a href="tel:+918262908873"
+                                        style="margin: 0; font-size: 1.1rem; color: white; text-decoration: none; font-weight: 600;">+91
+                                        82629 08873</a>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 15px;">
+                                <div
+                                    style="width: 45px; height: 45px; background: rgba(248,113,113,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="ph-fill ph-envelope" style="color: #F87171; font-size: 1.2rem;"></i>
+                                </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <span
+                                        style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; font-weight: 700;">Email
+                                        Support</span>
+                                    <a href="mailto:purushottamnaiker8@gmail.com"
+                                        style="margin: 0; font-size: 1rem; color: white; text-decoration: none;">purushottamnaiker8@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 40px; display: flex; justify-content: space-between; align-items: center;">
+                    <p style="font-size: 0.9rem; color: #64748B;">&copy; 2026 Near Taxi Goa. Registered & Premium
+                        Service Provider.</p>
+                    <div style="display: flex; gap: 30px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Google_Maps_Pin.svg"
+                            alt="Google Maps" height="30" style="opacity: 0.5;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                            alt="Google" height="25" style="opacity: 0.5;">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+
+</html>

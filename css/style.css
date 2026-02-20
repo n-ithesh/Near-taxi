@@ -1,0 +1,182 @@
+/* 
+   NEAR TAXI SERVICE - GLOBAL STYLES 
+   Design System & Variables
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* Colors - Taxi Yellow Theme */
+    --color-primary: #FFD700;
+    /* Taxi Yellow (Gold) */
+    --color-primary-light: #FFEA00;
+    --color-accent: #111827;
+    /* Deep Black/Blue for contrast text */
+    --color-accent-hover: #000000;
+    --color-surface: #FFFFFF;
+    /* Pure White */
+    --color-background: #F9FAFB;
+    /* Very light gray */
+    --color-text-main: #111827;
+    --color-text-muted: #4B5563;
+    --color-border: #E5E7EB;
+    --color-success: #25D366;
+    /* WhatsApp Green */
+
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing System */
+    --space-xs: 0.25rem;
+    /* 4px */
+    --space-sm: 0.5rem;
+    /* 8px */
+    --space-md: 1rem;
+    /* 16px */
+    --space-lg: 1.5rem;
+    /* 24px */
+    --space-xl: 2rem;
+    /* 32px */
+    --space-2xl: 3rem;
+    /* 48px */
+    --space-3xl: 5rem;
+    /* 80px */
+
+    /* Effects */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    --shadow-float: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --backdrop-blur: 16px;
+
+    /* Animation */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-surface: #111827;
+        --color-background: #0B0F19;
+        --color-text-main: #F1F5F9;
+        --color-text-muted: #94A3B8;
+        --color-border: #1E293B;
+        --glass-bg: rgba(11, 15, 25, 0.7);
+        --glass-border: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Global Reset & Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    /* Dark text for contrast */
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+button {
+    font-family: var(--font-heading);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* Utility Classes */
+.text-accent {
+    color: var(--color-primary) !important;
+}
+
+.bg-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--backdrop-blur));
+    -webkit-backdrop-filter: blur(var(--backdrop-blur));
+    border: 1px solid var(--glass-border);
+}
+
+.premium-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 6px 16px;
+    border-radius: 100px;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+}
+
+/* Split Architecture Visibility Control */
+#mobile-app {
+    display: block;
+}
+
+#desktop-experience {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    #mobile-app {
+        display: none;
+    }
+
+    #desktop-experience {
+        display: block;
+    }
+}
