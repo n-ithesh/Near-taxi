@@ -22,6 +22,9 @@
 </head>
 
 <body>
+    <!-- Premium Scroll Progress Indicator -->
+    <div class="scroll-progress-bar" id="scrollIndicator"></div>
+
     <!-- SVG Filters for Performance/Quality -->
     <svg style="display:none;">
         <defs>
@@ -76,10 +79,10 @@
                         <div class="link-icon"><i class="ph-fill ph-info"></i></div>
                         <span>About Us</span>
                     </a>
-                    <a href="#testimonials">
+                    <!-- <a href="#testimonials">
                         <div class="link-icon"><i class="ph-fill ph-chat-circle-dots"></i></div>
                         <span>Customer Reviews</span>
-                    </a>
+                    </a> -->
                     <a href="tel:+918262908873" class="menu-cta">
                         <i class="ph-fill ph-phone-call"></i>
                         Book Your Taxi
@@ -821,7 +824,7 @@
                     <a href="#fleet">Our Fleet</a>
                     <a href="tours.html">Popular Tours</a>
                     <a href="about.html">About Us</a>
-                    <a href="#testimonials">Reviews</a>
+                    <!-- <a href="#testimonials">Reviews</a> -->
                 </div>
                 <div class="nav-cta">
                     <a href="tel:+918262908873" class="btn btn-primary">
@@ -1576,6 +1579,17 @@
             duration: 800,
             once: true,
             offset: 100
+        });
+
+        // Scroll Progress Bar Logic
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            const indicator = document.getElementById("scrollIndicator");
+            if (indicator) {
+                indicator.style.width = scrolled + "%";
+            }
         });
     </script>
 </body>
