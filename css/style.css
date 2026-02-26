@@ -8,10 +8,11 @@
 :root {
     /* Colors - Taxi Yellow Theme */
     --color-primary: #FFD700;
-    /* Taxi Yellow (Gold) */
+    /* Colors - Taxi Yellow Theme */
+    --color-primary: #FFD700; /* Taxi Yellow (Gold) */
     --color-primary-light: #FFEA00;
-    --color-accent: #111827;
-    /* Deep Black/Blue for contrast text */
+    --color-accent: #111827; /* Deep Black/Blue for contrast on yellow */
+    --color-heading: #111827; /* Headings */
     --color-accent-hover: #000000;
     --color-surface: #FFFFFF;
     /* Pure White */
@@ -65,6 +66,7 @@
         --color-surface: #111827;
         --color-background: #0B0F19;
         --color-text-main: #F1F5F9;
+        --color-heading: #FFFFFF;
         --color-text-muted: #94A3B8;
         --color-border: #1E293B;
         --glass-bg: rgba(11, 15, 25, 0.7);
@@ -103,8 +105,7 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
-    color: var(--color-accent);
-    /* Dark text for contrast */
+    color: var(--color-heading);
     line-height: 1.2;
     margin-bottom: var(--space-md);
 }
@@ -179,4 +180,124 @@ button {
     #desktop-experience {
         display: block;
     }
+}
+
+/* --- PREMIUM MAGIC & ANIMATIONS --- */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+}
+
+@keyframes floatMagic {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.btn-primary:not(.btn-outline) {
+    animation: pulseGlow 2.5s infinite;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s infinite;
+    pointer-events: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5);
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+}
+
+.premium-badge {
+    background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(30,30,30,0.95) 100%);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.premium-badge::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,215,0,0.3), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+    pointer-events: none;
+}
+
+.premium-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+}
+
+/* Global Card Hover Enhancements & Smooth Interactions */
+.fleet-card, .service-card-mobile, .service-card, .desktop-place-card, .place-card-scroll, .quick-card {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fleet-card:hover, .service-card-mobile:hover, .service-card:hover, .desktop-place-card:hover, .place-card-scroll:hover, .quick-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* Smooth Image Scale on Hover */
+.fleet-card img, .desktop-place-card img, .place-card-scroll img, .place-card img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.fleet-card:hover img, .desktop-place-card:hover img, .place-card-scroll:hover img, .place-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Glassmorphism Details Enhancement */
+.bg-glass {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon button hover spin/scale */
+.icon-btn i {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.icon-btn:hover i {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Make text accent gradient for premium feel */
+.text-accent {
+    background: linear-gradient(to right, #FFD700, #FBBF24);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none !important;
+}
+
+/* Premium Scroll Indicator */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(to right, #FFD700, #FBBF24);
+    z-index: 99999;
+    transition: width 0.1s;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    border-radius: 0 2px 2px 0;
 }

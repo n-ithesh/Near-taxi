@@ -22,6 +22,9 @@
 </head>
 
 <body>
+    <!-- Premium Scroll Progress Indicator -->
+    <div class="scroll-progress-bar" id="scrollIndicator"></div>
+
     <!-- SVG Filters for Performance/Quality -->
     <svg style="display:none;">
         <defs>
@@ -78,7 +81,7 @@
                         <div class="link-icon"><i class="ph-fill ph-info"></i></div>
                         <span>About Us</span>
                     </a>
-                    <a href="#testimonials">
+                    <!-- <a href="#testimonials">
                         <div class="link-icon"><i class="ph-fill ph-chat-circle-dots"></i></div>
                         <span>Customer Reviews</span>
                     </a>
@@ -847,7 +850,7 @@
                     <a href="#fleet">Our Fleet</a>
                     <a href="tours.html">Popular Tours</a>
                     <a href="about.html">About Us</a>
-                    <a href="#testimonials">Reviews</a>
+                    <!-- <a href="#testimonials">Reviews</a> -->
                 </div>
                 <div class="nav-cta">
                     <a href="tel:+917058260493" class="btn btn-primary">
@@ -1104,7 +1107,7 @@
                             <p style="color: #4B5563 !important; margin-bottom: 16px; font-size: 0.9rem;">Perfect
                                 for solo or couple travel. Hatchbacks like Wagon R/Celerio.</p>
                             <span
-                                style="display: inline-block; padding: 6px 12px; background: #f3f4f6; border-radius: 8px; font-weight: 600; font-size: 0.875rem;">Starts
+                                style="display: inline-block; padding: 6px 12px; background: #163b85; border-radius: 8px; font-weight: 600; font-size: 0.875rem;">Starts
                                 at ₹999</span>
                         </div>
                     </div>
@@ -1121,7 +1124,7 @@
                             <p style="color: #4B5563 !important; margin-bottom: 16px; font-size: 0.9rem;">Maximum
                                 comfort for small families. Dzire/Amaze/Etios.</p>
                             <span
-                                style="display: inline-block; padding: 6px 12px; background: #f3f4f6; border-radius: 8px; font-weight: 600; font-size: 0.875rem;">Starts
+                                style="display: inline-block; padding: 6px 12px; background: #163b85; border-radius: 8px; font-weight: 600; font-size: 0.875rem;">Starts
                                 at ₹1299</span>
                         </div>
                     </div>
@@ -1138,7 +1141,7 @@
                             <p style="color: #4B5563 !important; margin-bottom: 16px; font-size: 0.9rem;">Spacious
                                 for groups. Innova Crysta / Ertiga / Marazzo.</p>
                             <span
-                                style="display: inline-block; padding: 6px 12px; background: #f3f4f6; border-radius: 8px; font-weight: 600; font-size: 0.875rem;">Starts
+                                style="display: inline-block; padding: 6px 12px; background: #163b85; border-radius: 8px; font-weight: 600; font-size: 0.875rem;">Starts
                                 at ₹1899</span>
                         </div>
                     </div>
@@ -1155,7 +1158,7 @@
                             <p style="color: #4B5563 !important; margin-bottom: 16px; font-size: 0.9rem;">Premium
                                 travel experience. BMW/Mercedes/Audi Available.</p>
                             <span
-                                style="display: inline-block; padding: 6px 12px; background: #f3f4f6; border-radius: 8px; font-weight: 600; font-size: 0.875rem;">Custom
+                                style="display: inline-block; padding: 6px 12px; background: #163b85; border-radius: 8px; font-weight: 600; font-size: 0.875rem;">Custom
                                 Rates</span>
                         </div>
                     </div>
@@ -1649,6 +1652,17 @@
             duration: 800,
             once: true,
             offset: 100
+        });
+
+        // Scroll Progress Bar Logic
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            const indicator = document.getElementById("scrollIndicator");
+            if (indicator) {
+                indicator.style.width = scrolled + "%";
+            }
         });
     </script>
 </body>
