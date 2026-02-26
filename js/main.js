@@ -80,11 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navItems.forEach(item => {
         item.addEventListener('click', function (e) {
-            // Remove active class from all
-            navItems.forEach(nav => nav.classList.remove('active'));
-
-            // Add to clicked
-            this.classList.add('active');
+            // Only handle active state changes if it's an anchor link (hash)
+            // If it's a real page link like services.html, let the browser handle it
+            const href = this.getAttribute('href');
+            if(href && href.startsWith('#')) {
+                // Remove active class from all
+                navItems.forEach(nav => nav.classList.remove('active'));
+    
+                // Add to clicked
+                this.classList.add('active');
+            }
         });
     });
 
